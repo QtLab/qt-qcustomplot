@@ -2,12 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "src/core.h"
-#include "src/layoutelements/layoutelement-legend.h"
-#include "src/plottables/plottable-financial.h"
-#include "src/layoutelements/layoutelement-axisrect.h"
-#include "src/plottables/plottable-bars.h"
-#include "src/axis/axistickerdatetime.h"
+#include <QPushButton>
+#include <QButtonGroup>
+#include "examples/ex_financial.h"
 
 class MainWindow : public QMainWindow
 {
@@ -18,11 +15,19 @@ public:
 
     ~MainWindow();
 
-protected:
-    void drawStockPlot();
+protected slots:
+    void onEventToButtonClicked(int iIndex);
 
-private:
-    QCustomPlot * m_Plot;
+protected:
+    void InitUIElements();
+    void InitLayout();
+    void InitConnect();
+
+protected:
+    EXFinancial   * m_Financial;
+    QButtonGroup  * m_Group;
+
+    QPushButton   * m_ButtonFin;
 };
 
 #endif // MAINWINDOW_H

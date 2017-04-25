@@ -58,7 +58,8 @@ SOURCES += main.cpp\
     src/plottables/plottable-errorbar.cpp \
     src/plottables/plottable-financial.cpp \
     src/plottables/plottable-graph.cpp \
-    src/plottables/plottable-statisticalbox.cpp
+    src/plottables/plottable-statisticalbox.cpp \
+    examples/ex_financial.cpp
 
 HEADERS  += mainwindow.h \
     src/colorgradient.h \
@@ -107,7 +108,8 @@ HEADERS  += mainwindow.h \
     src/plottables/plottable-errorbar.h \
     src/plottables/plottable-financial.h \
     src/plottables/plottable-graph.h \
-    src/plottables/plottable-statisticalbox.h
+    src/plottables/plottable-statisticalbox.h \
+    examples/ex_financial.h
 
 SUBDIRS += \
     src/qcp-staticlib.pro
